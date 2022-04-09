@@ -10,18 +10,21 @@ import ActionButton from "../components/ActionButton";
 import AppHeader from "../components/AppHeader";
 
 import AppScreen from "../components/AppScreen";
-import ForgotContainer from "../components/ForgotContainer";
+import RegisterContainer from "../components/RegisterContainer";
 
-function ForgotPasswordScreen({ navigation }) {
+function RegisterScreen({ navigation }) {
   return (
     <AppScreen>
-      <AppHeader title={"Forgot Password"} />
+      <AppHeader title={"Register"} />
       <KeyboardAvoidingView
         style={styles.infoContainer}
         behavior="position"
         keyboardVerticalOffset={50}
       >
-        <ForgotContainer onPress={() => navigation.navigate("Home")} />
+        <RegisterContainer
+          title="Register"
+          onPress={() => navigation.navigate("Home")}
+        />
       </KeyboardAvoidingView>
     </AppScreen>
   );
@@ -38,4 +41,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ForgotPasswordScreen;
+export default RegisterScreen;

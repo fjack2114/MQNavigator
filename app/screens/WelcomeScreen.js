@@ -5,8 +5,9 @@ import AppColors from "../config/AppColors";
 import AppScreen from "../components/AppScreen";
 import AppText from "../components/AppText";
 import WelcomeButton from "../components/WelcomeButton";
+import SignInScreen from "./SignInScreen";
 
-function WelcomeScreen() {
+function WelcomeScreen({ navigation }) {
   return (
     <AppScreen>
       <ImageBackground
@@ -21,9 +22,24 @@ function WelcomeScreen() {
           <AppText style={styles.text}>Welcome to the MQ Navigator</AppText>
         </View>
         <View style={styles.button}>
-          <WelcomeButton title="Register" buttonColor="Magenta" color="White" />
-          <WelcomeButton title="Login" buttonColor="Purple" color="White" />
-          <WelcomeButton title="Guest" buttonColor="BrightRed" color="White" />
+          <WelcomeButton
+            title="Register"
+            buttonColor="Magenta"
+            color="White"
+            onPress={() => navigation.navigate("Register")}
+          />
+          <WelcomeButton
+            title="Login"
+            buttonColor="Purple"
+            color="White"
+            onPress={() => navigation.navigate("SignIn")}
+          />
+          <WelcomeButton
+            title="Guest"
+            buttonColor="BrightRed"
+            color="White"
+            onPress={() => navigation.navigate("Home")}
+          />
         </View>
       </ImageBackground>
     </AppScreen>

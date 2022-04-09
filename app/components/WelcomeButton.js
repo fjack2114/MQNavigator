@@ -27,15 +27,15 @@ const styles = StyleSheet.create({
   button: {
     width: 175,
     height: 50,
-    borderRadius: 45,
-    backgroundColor: AppColors.light,
+    borderRadius: 10,
+    //   backgroundColor: AppColors.light,
     justifyContent: "center",
     alignItems: "center",
   },
   text: {
     fontSize: 20,
     fontFamily: "MontserratAlternates_400Regular",
-    color: AppColors.white,
+    //    color: AppColors.white,
   },
 });
 

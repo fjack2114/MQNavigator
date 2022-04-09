@@ -4,16 +4,28 @@ import AppColors from "../config/AppColors";
 
 import AppText from "./AppText";
 
-function AppHeader(props) {
+function AppHeader({ title }) {
   return (
-    <View>
-      <Image source={require("../assets/MQLogo.png")} style={styles.image} />
-      <AppText style={styles.text}>Sign In</AppText>
-    </View>
+    <>
+      <View>
+        <Image
+          source={require("../assets/MQNav1TopHalf.png")}
+          style={styles.topHalf}
+        />
+      </View>
+      <View style={styles.container}>
+        <Image source={require("../assets/MQLogo.png")} style={styles.image} />
+        <AppText style={styles.text}>{title}</AppText>
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    position: "absolute",
+    alignSelf: "center",
+  },
   image: {
     marginTop: 50,
     height: 50,
@@ -27,6 +39,9 @@ const styles = StyleSheet.create({
     fontSize: 22,
     alignSelf: "center",
     marginTop: 70,
+  },
+  topHalf: {
+    alignSelf: "center",
   },
 });
 

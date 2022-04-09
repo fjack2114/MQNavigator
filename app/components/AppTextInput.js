@@ -16,14 +16,16 @@ function AppTextInput({ icon, textInput, ...otherProps }) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    backgroundColor: AppColors.light,
+    backgroundColor: AppColors.White,
     width: 225,
-    height: 35,
+    height: 25,
   },
   icon: {
     marginLeft: 3,
-    marginTop: 8,
+    marginTop: 2,
+    color: AppColors.BrightRed,
   },
+
   placeholderText: {
     fontFamily: "Montserrat_400Regular",
     fontSize: 16,

@@ -1,18 +1,11 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import AppScreen from "./app/components/AppScreen";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import SignIn from "./app/screens/SignIn";
+import AuthNavigator from "./app/navigation/AuthNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 
 export default function App() {
-  return <SignIn />;
+  return (
+    <NavigationContainer>
+      <AuthNavigator />
+    </NavigationContainer>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
