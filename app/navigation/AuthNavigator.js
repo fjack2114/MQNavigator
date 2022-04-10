@@ -6,6 +6,7 @@ import WelcomeScreen from "../screens/WelcomeScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import HomeScreen from "../screens/HomeScreen";
 import ForgotPasswordScreen from "../screens/FogotPasswordScreen";
+import TabNavigator from "./TabNavigator";
 
 const AppStack = createStackNavigator();
 
@@ -28,7 +29,7 @@ const AuthNavigator = () => (
     />
     <AppStack.Screen
       name="Home"
-      component={HomeScreen}
+      component={TabNavigator}
       options={{ headerShown: false }}
     />
     <AppStack.Screen
