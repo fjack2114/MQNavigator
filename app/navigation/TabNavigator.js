@@ -4,8 +4,8 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import HomeScreen from "../screens/HomeScreen";
 import HBATScreen from "../screens/HBATScreen";
-import AccountScreen from "../screens/AccountScreen";
 import AppColors from "../config/AppColors";
+import OptionsScreen from "../screens/OptionsScreen";
 
 const AppTab = createBottomTabNavigator();
 
@@ -34,10 +34,13 @@ const TabNavigator = () => (
         },
       }}
     />
+
     <AppTab.Screen
       name="Options"
-      component={AccountScreen}
+      component={OptionsScreen}
+      screenOptions={{ presentation: "modal" }}
       options={{
+        presentation: "modal",
         headerShown: false,
         tabBarIcon: ({ focused, color }) => {
           let icon;
